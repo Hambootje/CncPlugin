@@ -1,4 +1,8 @@
 # CncControl plugin to Repetier-host
+Fork from https://github.com/ahd71/repetier-cncplugin
+
+-Added additional buttons for setting reference easier
+-Added homing button
 
 ## Abstract
 A Repetier Host plugin focused on CNC machine operationss.
