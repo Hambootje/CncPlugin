@@ -1,8 +1,9 @@
 # CncControl plugin to Repetier-host
 Fork from https://github.com/ahd71/repetier-cncplugin
 
--Added additional buttons for setting reference easier
--Added homing button
+- Added additional buttons for setting reference easier
+- Added homing button
+- Added settings default preferneces for using gamecontroller i.s.o. keyboard for jogging 
 
 ## Abstract
 A Repetier Host plugin focused on CNC machine operationss.
@@ -41,9 +42,14 @@ Released under Creative Common with attribution 4.0 (CC BY). In short that allow
 * Error "Could not load file or assembly 'CncPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. Operation is not supported. (Exception from HRESULT: 0x80131515)". Windows by default prevents downloaded dll's to be used. See the install instructions above how to unblock the dll.
 
 ## Planned features / To-do
-See the [issue tracker](https://github.com/ahd71/repetier-cncplugin/issues).
+
 
 ## Releases
+* 0.16 / 2022-10-01 - Added additional buttons for setting reference easier; Added homing button; Added settings default preferneces for using gamecontroller i.s.o. keyboard for jogging 
+
+## Abstract
+
+CNCPlugin by ahd71:
 * 0.15 / 2014-11-01 - Fixed two compatibility issue introduced with Repetier 1.03 and 1.06 due to changes in the plugin interfaces
 * 0.14 / 2014-04-09 - Global hotkeys in Windows (makes them work outside the CNC tab), see issue #7 for more details
 * 0.13 / 2014-04-06 - Presentation of current position from the analyzer object
