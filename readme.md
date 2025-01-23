@@ -1,9 +1,13 @@
 # CncControl plugin to Repetier-host
+2025 update:
+- reworked Z-probing for Marlin commands
+
+
 Fork from https://github.com/ahd71/repetier-cncplugin
 
 - Added additional buttons for setting reference easier
 - Added homing button
-- Added settings default preferneces for using gamecontroller i.s.o. keyboard for jogging 
+- Added settings default preferences for using gamecontroller i.s.o. keyboard for jogging 
 
 ## Abstract
 A Repetier Host plugin focused on CNC machine operationss.
