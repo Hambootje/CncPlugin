@@ -16,7 +16,7 @@ namespace CncPlugin_BH
     {
         private IHost host;
 
-        const string release = "CncPlugin_BH - v0.15 - (c) BH 2022-10-01";
+        const string release = "CncPlugin_BH - v0.16 - (c) BH 2025-01-23";
 
         private double step_size;
 
@@ -286,7 +286,7 @@ namespace CncPlugin_BH
         }
         private void btn_probe_read_Click(object sender, System.EventArgs e)
         {
-            host.Connection.injectManualCommand("G31");
+            host.Connection.injectManualCommand("M119");
         }
 
         private void VisibleChange(object sender, EventArgs e)
@@ -532,10 +532,11 @@ namespace CncPlugin_BH
             lblPosY.Text = host.Connection.Analyzer.y.ToString();
             lblPosZ.Text = host.Connection.Analyzer.z.ToString();
 
-            string h = host.Connection.extract(response, "Z-probe:");
+            string h = host.Connection.extract(response, "Bed X:");
             if (h != null)
             {
-                txtProbeMeasurment.Text = h;
+                string result = response.Substring(response.LastIndexOf("Z:") + 2);
+                txtProbeMeasurment.Text = result;
             }
 
         }
@@ -547,7 +548,7 @@ namespace CncPlugin_BH
             lblPosY.Text = host.Connection.Analyzer.y.ToString();
             lblPosZ.Text = host.Connection.Analyzer.z.ToString();
 
-            string h = host.Connection.extract(response, "Z-probe state:");
+            string h = host.Connection.extract(response, "z_probe:");
             if (h != null)
             {
                 txtProbeRead.Text = h;
@@ -589,9 +590,5 @@ namespace CncPlugin_BH
 
         }
 
-        private void txtProbeRead_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
